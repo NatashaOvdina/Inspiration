@@ -58,16 +58,48 @@
 		42780DDA2B6942D900B9FE65 /* Inspiration */ = {
 			isa = PBXGroup;
 			children = (
-				42780DDB2B6942D900B9FE65 /* AppDelegate.swift */,
-				42780DDD2B6942D900B9FE65 /* SceneDelegate.swift */,
-				42780DDF2B6942D900B9FE65 /* ViewController.swift */,
-				42780DE12B6942D900B9FE65 /* Main.storyboard */,
+				42780DF12B696DCD00B9FE65 /* Models */,
+				42780DF22B696DD900B9FE65 /* ViewControllers */,
+				42780DF42B696E2000B9FE65 /* Storyboards */,
+				42780DF32B696DEA00B9FE65 /* App */,
 				42780DE42B6942DC00B9FE65 /* Assets.xcassets */,
-				42780DE62B6942DC00B9FE65 /* LaunchScreen.storyboard */,
-				42780DE92B6942DC00B9FE65 /* Info.plist */,
-				42780DEF2B69567300B9FE65 /* Quote.swift */,
 			);
 			path = Inspiration;
+			sourceTree = "<group>";
+		};
+		42780DF12B696DCD00B9FE65 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				42780DEF2B69567300B9FE65 /* Quote.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		42780DF22B696DD900B9FE65 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				42780DDF2B6942D900B9FE65 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		42780DF32B696DEA00B9FE65 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				42780DDB2B6942D900B9FE65 /* AppDelegate.swift */,
+				42780DDD2B6942D900B9FE65 /* SceneDelegate.swift */,
+				42780DE92B6942DC00B9FE65 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		42780DF42B696E2000B9FE65 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				42780DE62B6942DC00B9FE65 /* LaunchScreen.storyboard */,
+				42780DE12B6942D900B9FE65 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,7 +330,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V56Y32PAW4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Inspiration/Info.plist;
+				INFOPLIST_FILE = Inspiration/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Inspiration Quotes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -331,7 +363,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V56Y32PAW4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Inspiration/Info.plist;
+				INFOPLIST_FILE = Inspiration/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Inspiration Quotes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
