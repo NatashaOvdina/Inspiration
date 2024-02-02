@@ -8,14 +8,14 @@
 import UIKit
 
 final class ViewController: UIViewController {
-    private let url = URL(string: "https://quote-garden.onrender.com/api/v3/quotes")!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         fetchRandomQuote()
     }
     
     private func fetchRandomQuote() {
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data else {
                 print(error?.localizedDescription ?? "No error description")
                 return
