@@ -14,7 +14,6 @@
 		42780DE52B6942DC00B9FE65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42780DE42B6942DC00B9FE65 /* Assets.xcassets */; };
 		42780DE82B6942DC00B9FE65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42780DE62B6942DC00B9FE65 /* LaunchScreen.storyboard */; };
 		42780DF02B69567300B9FE65 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42780DEF2B69567300B9FE65 /* Quote.swift */; };
-		42780DF72B6D05EF00B9FE65 /* Sometime.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42780DF62B6D05EF00B9FE65 /* Sometime.otf */; };
 		42780DF92B6D072700B9FE65 /* HolidayFree.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42780DF82B6D072700B9FE65 /* HolidayFree.otf */; };
 /* End PBXBuildFile section */
 
@@ -177,7 +176,6 @@
 				42780DE82B6942DC00B9FE65 /* LaunchScreen.storyboard in Resources */,
 				42780DE52B6942DC00B9FE65 /* Assets.xcassets in Resources */,
 				42780DF92B6D072700B9FE65 /* HolidayFree.otf in Resources */,
-				42780DF72B6D05EF00B9FE65 /* Sometime.otf in Resources */,
 				42780DE32B6942D900B9FE65 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,7 +345,7 @@
 				DEVELOPMENT_TEAM = V56Y32PAW4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Inspiration/App/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Inspiration Quotes";
+				INFOPLIST_KEY_CFBundleDisplayName = Inspiration;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -380,7 +378,7 @@
 				DEVELOPMENT_TEAM = V56Y32PAW4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Inspiration/App/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Inspiration Quotes";
+				INFOPLIST_KEY_CFBundleDisplayName = Inspiration;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
