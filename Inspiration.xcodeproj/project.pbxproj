@@ -14,6 +14,8 @@
 		42780DE52B6942DC00B9FE65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42780DE42B6942DC00B9FE65 /* Assets.xcassets */; };
 		42780DE82B6942DC00B9FE65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42780DE62B6942DC00B9FE65 /* LaunchScreen.storyboard */; };
 		42780DF02B69567300B9FE65 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42780DEF2B69567300B9FE65 /* Quote.swift */; };
+		42780DF72B6D05EF00B9FE65 /* Sometime.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42780DF62B6D05EF00B9FE65 /* Sometime.otf */; };
+		42780DF92B6D072700B9FE65 /* HolidayFree.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42780DF82B6D072700B9FE65 /* HolidayFree.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		42780DE72B6942DC00B9FE65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42780DE92B6942DC00B9FE65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42780DEF2B69567300B9FE65 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		42780DF62B6D05EF00B9FE65 /* Sometime.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sometime.otf; sourceTree = "<group>"; };
+		42780DF82B6D072700B9FE65 /* HolidayFree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HolidayFree.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 				42780DF42B696E2000B9FE65 /* Storyboards */,
 				42780DF32B696DEA00B9FE65 /* App */,
 				42780DE42B6942DC00B9FE65 /* Assets.xcassets */,
+				42780DF52B6D053900B9FE65 /* Fonts */,
 			);
 			path = Inspiration;
 			sourceTree = "<group>";
@@ -100,6 +105,15 @@
 				42780DE12B6942D900B9FE65 /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		42780DF52B6D053900B9FE65 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				42780DF82B6D072700B9FE65 /* HolidayFree.otf */,
+				42780DF62B6D05EF00B9FE65 /* Sometime.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +176,8 @@
 			files = (
 				42780DE82B6942DC00B9FE65 /* LaunchScreen.storyboard in Resources */,
 				42780DE52B6942DC00B9FE65 /* Assets.xcassets in Resources */,
+				42780DF92B6D072700B9FE65 /* HolidayFree.otf in Resources */,
+				42780DF72B6D05EF00B9FE65 /* Sometime.otf in Resources */,
 				42780DE32B6942D900B9FE65 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
