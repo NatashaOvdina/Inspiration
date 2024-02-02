@@ -141,6 +141,11 @@
                             <constraint firstItem="gJY-4e-wqt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zUG-nO-Uht"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="ODC-cV-y0T" id="QwQ-RQ-Abm"/>
+                        <outlet property="genreLabel" destination="cOQ-p1-Uhi" id="kyE-Np-3nI"/>
+                        <outlet property="quoteLabel" destination="osm-LB-uKW" id="ZDF-pJ-zb9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

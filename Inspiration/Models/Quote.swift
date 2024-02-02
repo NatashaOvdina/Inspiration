@@ -7,7 +7,22 @@
 
 import Foundation
 
-let url = URL(string: "https://quote-garden.onrender.com/api/v3/quotes")!
+enum Link {
+    case randomQuoteURL
+    case authorsURL
+    case categoriesURL
+    
+    var url: URL {
+        switch self {
+        case .randomQuoteURL:
+        return URL(string: "https://quote-garden.onrender.com/api/v3/quotes?limit=1")!
+        case .authorsURL:
+            return URL(string: "https://quote-garden.onrender.com/api/v3/authors")!
+        case .categoriesURL:
+            return URL(string: "https://quote-garden.onrender.com/api/v3/genres")!
+        }
+    }
+}
 
 struct Info: Decodable {
     let data: [Quote]
@@ -15,8 +30,8 @@ struct Info: Decodable {
 
 struct Quote: Decodable {
     let quoteText: String?
-    let quoteAuthor: String
-    let quoteGenre: String
+    let quoteAuthor: String?
+    let quoteGenre: String?
 }
 
 
