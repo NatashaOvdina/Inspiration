@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		424CDBF82B6D251D0045645B /* Sometime.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42780DF62B6D05EF00B9FE65 /* Sometime.otf */; };
 		42780DDC2B6942D900B9FE65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42780DDB2B6942D900B9FE65 /* AppDelegate.swift */; };
 		42780DDE2B6942D900B9FE65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42780DDD2B6942D900B9FE65 /* SceneDelegate.swift */; };
 		42780DE02B6942D900B9FE65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42780DDF2B6942D900B9FE65 /* ViewController.swift */; };
@@ -174,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42780DE82B6942DC00B9FE65 /* LaunchScreen.storyboard in Resources */,
+				424CDBF82B6D251D0045645B /* Sometime.otf in Resources */,
 				42780DE52B6942DC00B9FE65 /* Assets.xcassets in Resources */,
 				42780DF92B6D072700B9FE65 /* HolidayFree.otf in Resources */,
 				42780DE32B6942D900B9FE65 /* Main.storyboard in Resources */,
