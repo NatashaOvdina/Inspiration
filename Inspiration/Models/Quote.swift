@@ -15,7 +15,7 @@ enum Link {
     var url: URL {
         switch self {
         case .randomQuoteURL:
-        return URL(string: "https://quote-garden.onrender.com/api/v3/quotes?limit=1")!
+        return URL(string: "https://quote-garden.onrender.com/api/v3/quotes/random")!
         case .authorsURL:
             return URL(string: "https://quote-garden.onrender.com/api/v3/authors")!
         case .categoriesURL:

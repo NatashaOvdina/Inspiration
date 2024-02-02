@@ -23,29 +23,23 @@ final class ViewController: UIViewController {
     }
     
     private func fetchRandomQuote() {
-        URLSession.shared.dataTask(with: Link.randomQuoteURL.url) { [weak self] data, _, error in
-            guard let self else { return }
-            guard let data else {
-                print(error ?? "No error description")
-                return
-            }
-    
-            do {
-                let info = try JSONDecoder().decode(Quote.self, from: data)
-                
+        networkManager.fetch(Info.self, from: Link.randomQuoteURL.url) { result in
+            switch result {
+            case .success(let info):
                 DispatchQueue.main.async { [weak self] in
                     guard let self else { return }
-                    self.quoteLabel.text = info.quoteText
-                    self.authorLabel.text = info.quoteAuthor
-                    self.genreLabel.text = info.quoteGenre
-                    
+                    quoteLabel.text = info.data.first?.quoteText
+                    authorLabel.text = info.data.first?.quoteAuthor
+                    genreLabel.text = info.data.first?.quoteGenre
                 }
-                
-            } catch {
+            case .failure(let error):
                 print(error)
             }
-            
-        }.resume()
+        }
+    }
+    
+    @IBAction func buttonDidGenerate() {
+        fetchRandomQuote()
     }
     
 }

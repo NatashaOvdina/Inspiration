@@ -48,9 +48,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osm-LB-uKW">
-                                <rect key="frame" x="33" y="255" width="327" height="148.33333333333337"/>
-                                <string key="text">As I approve of a youth that has something of the old man in him, so I am no less pleased with an old man that has something of the youth. He that follows this rule may be old in body, but can never be so in mind</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osm-LB-uKW">
+                                <rect key="frame" x="33" y="255" width="327" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -72,6 +71,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonDidGenerate" destination="BYZ-38-t0r" eventType="touchUpInside" id="MAT-Uo-Ran"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3e8-vb-bO9">
                                 <rect key="frame" x="124" y="661" width="145" height="40"/>
@@ -107,14 +109,14 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Surname" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODC-cV-y0T">
-                                <rect key="frame" x="128.33333333333331" y="529.33333333333337" width="136.33333333333331" height="27.666666666666629"/>
-                                <fontDescription key="fontDescription" name="SometimeRegular" family="Sometime" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODC-cV-y0T">
+                                <rect key="frame" x="196.66666666666666" y="557" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="SometimeRegular" family="Sometime" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOQ-p1-Uhi">
-                                <rect key="frame" x="20" y="730.66666666666663" width="73.333333333333329" height="22.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOQ-p1-Uhi">
+                                <rect key="frame" x="20" y="753" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
