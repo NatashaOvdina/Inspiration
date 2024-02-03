@@ -14,10 +14,15 @@ final class ViewController: UIViewController {
     @IBOutlet var authorLabel: UILabel!
     @IBOutlet var genreLabel: UILabel!
     
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
+    
     private var networkManager = NetworkManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
         fetchRandomQuote()
         
     }
@@ -31,6 +36,7 @@ final class ViewController: UIViewController {
                     quoteLabel.text = info.data.first?.quoteText
                     authorLabel.text = info.data.first?.quoteAuthor
                     genreLabel.text = info.data.first?.quoteGenre
+                    activityIndicator.stopAnimating()
                 }
             case .failure(let error):
                 print(error)

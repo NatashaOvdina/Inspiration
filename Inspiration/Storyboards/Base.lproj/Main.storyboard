@@ -111,7 +111,7 @@
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODC-cV-y0T">
                                 <rect key="frame" x="196.66666666666666" y="557" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="SometimeRegular" family="Sometime" pointSize="28"/>
+                                <fontDescription key="fontDescription" name="SometimeRegular" family="Sometime" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -121,6 +121,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Aqe-QW-Obe">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -128,6 +131,7 @@
                             <constraint firstItem="cnz-Wo-ps0" firstAttribute="top" secondItem="ODC-cV-y0T" secondAttribute="bottom" constant="27" id="HWZ-A4-Gc3"/>
                             <constraint firstItem="gJY-4e-wqt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="JFs-jB-9OE"/>
                             <constraint firstItem="osm-LB-uKW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PEW-bH-Vfj"/>
+                            <constraint firstItem="Aqe-QW-Obe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RMR-dn-V6U"/>
                             <constraint firstItem="4cG-TR-UW4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RvN-qj-5iT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4cG-TR-UW4" secondAttribute="bottom" constant="25" id="THH-77-hrn"/>
                             <constraint firstItem="ODC-cV-y0T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V1O-Ey-vrh"/>
@@ -139,11 +143,13 @@
                             <constraint firstItem="osm-LB-uKW" firstAttribute="top" secondItem="gJY-4e-wqt" secondAttribute="bottom" multiplier="17:9" id="nNz-nP-Fin"/>
                             <constraint firstItem="3e8-vb-bO9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nj4-wS-ch7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3e8-vb-bO9" secondAttribute="bottom" multiplier="7:6" id="sU3-ZK-QKL"/>
+                            <constraint firstItem="Aqe-QW-Obe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tr8-ox-e7L"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="osm-LB-uKW" secondAttribute="trailing" constant="33" id="z09-zo-tKn"/>
                             <constraint firstItem="gJY-4e-wqt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zUG-nO-Uht"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Aqe-QW-Obe" id="raM-zH-438"/>
                         <outlet property="authorLabel" destination="ODC-cV-y0T" id="QwQ-RQ-Abm"/>
                         <outlet property="genreLabel" destination="cOQ-p1-Uhi" id="kyE-Np-3nI"/>
                         <outlet property="quoteLabel" destination="osm-LB-uKW" id="ZDF-pJ-zb9"/>
