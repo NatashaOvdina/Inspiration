@@ -16,7 +16,6 @@ final class ViewController: UIViewController {
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
-    
     private var networkManager = NetworkManager.shared
     
     override func viewDidLoad() {
@@ -25,6 +24,10 @@ final class ViewController: UIViewController {
         activityIndicator.hidesWhenStopped = true
         fetchRandomQuote()
         
+    }
+    
+    @IBAction func buttonDidGenerate() {
+        fetchRandomQuote()
     }
     
     private func fetchRandomQuote() {
@@ -43,9 +46,6 @@ final class ViewController: UIViewController {
             }
         }
     }
-    
-    @IBAction func buttonDidGenerate() {
-        fetchRandomQuote()
-    }
+
     
 }

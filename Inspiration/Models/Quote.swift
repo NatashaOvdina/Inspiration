@@ -10,7 +10,7 @@ import Foundation
 enum Link {
     case randomQuoteURL
     case authorsURL
-    case categoriesURL
+    case genresURL
     
     var url: URL {
         switch self {
@@ -18,7 +18,7 @@ enum Link {
         return URL(string: "https://quote-garden.onrender.com/api/v3/quotes/random")!
         case .authorsURL:
             return URL(string: "https://quote-garden.onrender.com/api/v3/authors")!
-        case .categoriesURL:
+        case .genresURL:
             return URL(string: "https://quote-garden.onrender.com/api/v3/genres")!
         }
     }
@@ -32,6 +32,11 @@ struct Quote: Decodable {
     let quoteText: String?
     let quoteAuthor: String?
     let quoteGenre: String?
+}
+
+
+struct Genre: Decodable {
+    let data: [String]?
 }
 
 
