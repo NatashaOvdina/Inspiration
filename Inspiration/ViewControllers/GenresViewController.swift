@@ -5,7 +5,6 @@
 //  Created by Natalia Ovdina on 03.02.2024.
 //
 
-import Foundation
 import UIKit
 
 final class GenresViewController: UIViewController {
@@ -18,7 +17,7 @@ final class GenresViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //   self.genresCollectionView.delegate = self
-        self.genresCollectionView.dataSource = self
+       genresCollectionView.dataSource = self
         fetchGenres()
     }
     
