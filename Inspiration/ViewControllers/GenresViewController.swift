@@ -18,22 +18,10 @@ final class GenresViewController: UIViewController {
         super.viewDidLoad()
         //   self.genresCollectionView.delegate = self
        genresCollectionView.dataSource = self
-        fetchGenres()
+       
     }
     
-    private func fetchGenres() {
-        networkManager.fetch(Genre.self, from: Link.genresURL.url) { result in
-            switch result {
-            case .success(let genres):
-                if let data = genres.data {
-                    self.genresList = data
-                    self.genresCollectionView.reloadData()
-                }
-                case .failure(let error):
-                    print(error)
-                }
-            }
-        }
+
     }
 
     extension GenresViewController: UICollectionViewDataSource {

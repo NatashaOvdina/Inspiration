@@ -32,11 +32,34 @@ struct Quote: Decodable {
     let quoteText: String?
     let quoteAuthor: String?
     let quoteGenre: String?
+    
+    init(quoteText: String?, quoteAuthor: String?, quoteGenre: String?) {
+        self.quoteText = quoteText
+        self.quoteAuthor = quoteAuthor
+        self.quoteGenre = quoteGenre
+    }
+    
+    init(quoteDetails: [String: Any]) {
+        quoteText = quoteDetails["quoteText"] as? String ?? ""
+        quoteAuthor = quoteDetails["quoteAuthor"] as? String ?? ""
+        quoteGenre = quoteDetails["quoteGenre"] as? String ?? ""
+    }
+    
+    static func getRandomQuote(from value: Any) -> Quote {
+        var quoteInfo: [String: Any] = [:]
+        
+        let quote = Quote(quoteDetails: quoteInfo)
+        quoteInfo.
+    }
 }
 
 
 struct Genre: Decodable {
     let data: [String]?
+    
+    init(data: [String]?) {
+        self.data = data
+    }
 }
 
 
