@@ -56,6 +56,15 @@ struct Quote: Decodable {
     struct Genre: Decodable {
         let data: [String]?
         
+        init(data: [String]?) {
+            self.data = data
+        }
+        
+        init(genres: [String: Any]) {
+            data = genres["data"] as? [String] ?? []
+        }
+        
     }
+    
     
 

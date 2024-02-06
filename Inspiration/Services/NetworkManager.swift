@@ -13,5 +13,5 @@ final class NetworkManager {
     
     private init() {}
    
-  
+
 }

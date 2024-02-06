@@ -44,11 +44,7 @@ final class MainViewController: UIViewController {
                           let randomQuote = randomQuotes.first else {return}
                     
                     
-                    let quote = Quote(
-                        quoteText: randomQuote["quoteText"] as? String? ?? "",
-                        quoteAuthor: randomQuote["quoteAuthor"] as? String? ?? "",
-                        quoteGenre: randomQuote["quoteGenre"] as? String? ?? ""
-                    )
+                    let quote =  Quote(randomQuote: randomQuote)
                     
                     quoteLabel.text = quote.quoteText
                     authorLabel.text = quote.quoteAuthor
