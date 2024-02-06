@@ -31,6 +31,7 @@ final class MainViewController: UIViewController {
         fetchRandomQuote()
     }
     
+    
     private func fetchRandomQuote() {
         AF.request(Link.randomQuoteURL.url)
             .validate()
@@ -38,19 +39,20 @@ final class MainViewController: UIViewController {
                 guard let self else { return }
                 switch dataResponse.result {
                 case .success(let value):
-                    guard let quoteInfo = value as? [ String: Any ] else { return }
+                    guard let quoteInfo = value as? [String: Any],
+                          let randomQuotes = quoteInfo["data"] as? [[String: Any]],
+                          let randomQuote = randomQuotes.first else {return}
+                    
                     
                     let quote = Quote(
-                        quoteText: quoteInfo["quoteText"] as? String ?? "",
-                        quoteAuthor: quoteInfo["quoteAuthor"] as? String ?? "",
-                        quoteGenre: quoteInfo["quoteGenre"] as? String ?? ""
+                        quoteText: randomQuote["quoteText"] as? String? ?? "",
+                        quoteAuthor: randomQuote["quoteAuthor"] as? String? ?? "",
+                        quoteGenre: randomQuote["quoteGenre"] as? String? ?? ""
                     )
                     
-                    let info = Info(data: [quote])
-                    
-                    quoteLabel.text = info.data.first?.quoteText
-                    authorLabel.text = info.data.first?.quoteAuthor
-                    genreLabel.text = info.data.first?.quoteGenre
+                    quoteLabel.text = quote.quoteText
+                    authorLabel.text = quote.quoteAuthor
+                    genreLabel.text = quote.quoteGenre
                     activityIndicator.stopAnimating()
                     
                 case .failure(let error):
@@ -58,4 +60,9 @@ final class MainViewController: UIViewController {
                 }
             }
     }
+    
+    
 }
+
+
+
