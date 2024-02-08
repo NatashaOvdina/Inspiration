@@ -17,7 +17,8 @@ final class MainViewController: UIViewController {
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
-    private var networkManager = NetworkManager.shared
+    private let networkManager = NetworkManager.shared
+    private var quotes: [Quote] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,32 +34,25 @@ final class MainViewController: UIViewController {
     
     
     private func fetchRandomQuote() {
-        AF.request(Link.randomQuoteURL.url)
-            .validate()
-            .responseJSON { [weak self] dataResponse in
-                guard let self else { return }
-                switch dataResponse.result {
-                case .success(let value):
-                    guard let quoteInfo = value as? [String: Any],
-                          let randomQuotes = quoteInfo["data"] as? [[String: Any]],
-                          let randomQuote = randomQuotes.first else {return}
-                    
-                    
-                    let quote =  Quote(randomQuote: randomQuote)
-                    
-                    quoteLabel.text = quote.quoteText
-                    authorLabel.text = quote.quoteAuthor
-                    genreLabel.text = quote.quoteGenre
-                    activityIndicator.stopAnimating()
-                    
-                case .failure(let error):
-                    print(error)
-                }
+        networkManager.fetchRandomQuote(from: Link.randomQuoteURL.url) { [weak self ] result in
+            guard let self else { return }
+            switch result {
+            case .success(let quotes):
+                self.quotes = quotes
+        
+                quoteLabel.text = quotes.first?.quoteText
+                authorLabel.text = quotes.first?.quoteAuthor
+                genreLabel.text = quotes.first?.quoteGenre
+                
+                activityIndicator.stopAnimating()
+             
+            case .failure(let error):
+                print(error.localizedDescription)
             }
+        }
+        
+        
     }
-    
-    
 }
-
 
 

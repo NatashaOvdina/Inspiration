@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Alamofire
+
 
 enum Link {
     case randomQuoteURL
@@ -25,13 +25,9 @@ enum Link {
     }
 }
 
-struct Info: Decodable {
+struct Info {
     let data: [Quote]
-    
-    init(data: [Quote]) {
-        self.data = data
-    }
-    
+
 }
 
 struct Quote: Decodable {
@@ -39,20 +35,21 @@ struct Quote: Decodable {
     let quoteAuthor: String?
     let quoteGenre: String?
     
-    init(quoteText: String?, quoteAuthor: String?, quoteGenre: String?) {
-        self.quoteText = quoteText
-        self.quoteAuthor = quoteAuthor
-        self.quoteGenre = quoteGenre
-    }
-    
     init(randomQuote: [String: Any]) {
         quoteText = randomQuote["quoteText"] as? String? ?? ""
         quoteAuthor = randomQuote["quoteAuthor"] as? String? ?? ""
         quoteGenre = randomQuote["quoteGenre"] as? String? ?? ""
     }
     
-    
+    static func getRandomQuote(from value: Any) -> [Quote] {
+        guard let value = value as? [String: Any] else { return []}
+        guard let data = value["data"] as?  [[String: Any]] else { return [] }
+        
+        return data.map { Quote(randomQuote: $0)}
+        
+    }
 }
+
     struct Genre: Decodable {
         let data: [String]?
         
@@ -66,5 +63,5 @@ struct Quote: Decodable {
         
     }
     
-    
+
 

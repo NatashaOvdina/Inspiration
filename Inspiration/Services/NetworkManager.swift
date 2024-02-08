@@ -13,5 +13,17 @@ final class NetworkManager {
     
     private init() {}
    
-
+    func fetchRandomQuote(from url: URL, completion: @escaping(Result<[Quote], AFError>) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    let quotes = Quote.getRandomQuote(from: value)
+                    completion(.success(quotes))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+        }
+    }
 }
