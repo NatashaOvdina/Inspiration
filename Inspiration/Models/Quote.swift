@@ -61,6 +61,14 @@ struct Quote: Decodable {
             data = genres["data"] as? [String] ?? []
         }
         
+        static func getGenres(from value: Any) -> [Genre] {
+            guard let value = value as? [String: Any] else { return []}
+            guard let genres = value["data"] as? [String] else { return []}
+    
+            let genreNames = genres.map {_ in Genre(data: genres)}
+            return genreNames
+        }
+        
     }
     
 

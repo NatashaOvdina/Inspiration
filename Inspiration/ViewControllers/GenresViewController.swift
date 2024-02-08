@@ -24,24 +24,15 @@ final class GenresViewController: UIViewController {
     }
     
     private func fetchGenres() {
-        AF.request(Link.genresURL.url)
-            .validate()
-            .responseJSON { [unowned self] dataResponse in
-                switch dataResponse.result {
-                case .success(let value):
-                    guard let genresJSON = value as? [String: Any] else { return }
-                    guard let genres = genresJSON["data"] as? [String] else { return }
-                    
-                    for genre in genres {
-                        genresList.append(genre)
-                        
-                        genresCollectionView.reloadData()
-                        
-                    }
-                case .failure(let error):
-                    print(error)
-                }
+        NetworkManager.shared.fetchGenres(from: Link.genresURL.url) { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success(let genres):
+               //
+            case .failure(let error):
+                print(error.localizedDescription)
             }
+        }
     }
 }
     extension GenresViewController: UICollectionViewDataSource {

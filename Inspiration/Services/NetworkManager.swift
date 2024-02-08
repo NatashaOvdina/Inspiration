@@ -26,4 +26,18 @@ final class NetworkManager {
                 }
         }
     }
+    
+    func fetchGenres(from url: URL, completion: @escaping(Result<[Genre], AFError>) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    let genres = Genre.getGenres(from: value)
+                    completion(.success(genres))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+    }
 }
