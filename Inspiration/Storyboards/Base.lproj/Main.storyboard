@@ -180,7 +180,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4XN-UD-ulf">
-                                <rect key="frame" x="0.0" y="139" width="414" height="747"/>
+                                <rect key="frame" x="0.0" y="76" width="414" height="810"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2iH-zf-eOy">
                                     <size key="itemSize" width="283" height="55"/>
@@ -221,23 +221,13 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="PfW-2K-hdL">
-                                <rect key="frame" x="0.0" y="65" width="414" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="thM-85-1DS" id="qpm-th-W3L"/>
-                                </connections>
-                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H6f-kk-6jt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="PfW-2K-hdL" firstAttribute="top" secondItem="H6f-kk-6jt" secondAttribute="top" constant="9" id="1lp-02-HFG"/>
+                            <constraint firstItem="4XN-UD-ulf" firstAttribute="top" secondItem="H6f-kk-6jt" secondAttribute="top" constant="20" id="1U1-Ng-LFw"/>
                             <constraint firstItem="4XN-UD-ulf" firstAttribute="leading" secondItem="H6f-kk-6jt" secondAttribute="leading" id="2cB-BQ-xtO"/>
-                            <constraint firstItem="PfW-2K-hdL" firstAttribute="leading" secondItem="H6f-kk-6jt" secondAttribute="leading" id="ABp-4J-oGM"/>
-                            <constraint firstItem="PfW-2K-hdL" firstAttribute="trailing" secondItem="H6f-kk-6jt" secondAttribute="trailing" id="IKA-S7-Se9"/>
                             <constraint firstItem="4XN-UD-ulf" firstAttribute="bottom" secondItem="H6f-kk-6jt" secondAttribute="bottom" id="NuW-lP-nSf"/>
-                            <constraint firstItem="4XN-UD-ulf" firstAttribute="top" secondItem="PfW-2K-hdL" secondAttribute="bottom" constant="18" id="aa0-PM-86d"/>
                             <constraint firstItem="4XN-UD-ulf" firstAttribute="trailing" secondItem="H6f-kk-6jt" secondAttribute="trailing" id="lm6-ku-YAD"/>
                         </constraints>
                     </view>
@@ -255,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eKu-6g-Mhd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1979.3893129770991" y="250.7042253521127"/>
+            <point key="canvasLocation" x="1978.2608695652175" y="250.44642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H6J-ZQ-0ow">
