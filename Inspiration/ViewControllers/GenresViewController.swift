@@ -34,6 +34,9 @@ final class GenresViewController: UIViewController {
         fetchGenres()
     }
     
+    @IBAction func buttonActionBack(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
     // MARK: - Private Methods
     private func setupSearchController() {
         searchController.searchResultsUpdater = self
