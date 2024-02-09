@@ -184,7 +184,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Creator" footerTitle="for questions and feedbacks wtire to my email" id="qAe-71-rHg">
+                            <tableViewSection headerTitle="Creator" footerTitle="for questions and feedbacks write to my email" id="qAe-71-rHg">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="164" id="Ij7-Vd-KKC">
                                         <rect key="frame" x="0.0" y="50" width="393" height="164"/>
@@ -194,44 +194,53 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wfE-M0-eQ8">
-                                                    <rect key="frame" x="24.999999999999993" y="17" width="126.33333333333331" height="130"/>
+                                                    <rect key="frame" x="25" y="17" width="128" height="130"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="130" id="72k-Fc-OQR"/>
-                                                        <constraint firstAttribute="width" constant="126.33" id="mvk-Lj-Zhi"/>
+                                                        <constraint firstAttribute="width" constant="128" id="Xsk-g7-eSl"/>
+                                                        <constraint firstAttribute="width" secondItem="wfE-M0-eQ8" secondAttribute="height" multiplier="64:65" id="x09-Pg-n8c"/>
                                                     </constraints>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ACc-fI-bdj">
-                                                    <rect key="frame" x="173.33333333333337" y="25" width="179.66666666666663" height="92"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name Surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yvk-w0-FGU">
-                                                            <rect key="frame" x="0.0" y="0.0" width="152.66666666666666" height="32.666666666666664"/>
-                                                            <fontDescription key="fontDescription" name="SometimeRegular" family="Sometime" pointSize="28"/>
-                                                            <color key="textColor" systemColor="systemTealColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76Y-Zz-u3s">
-                                                            <rect key="frame" x="0.0" y="40.666666666666671" width="43.333333333333336" height="21.666666666666671"/>
-                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="gitHub" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bf-G5-xRj">
-                                                            <rect key="frame" x="0.0" y="70.333333333333329" width="53.333333333333336" height="21.666666666666671"/>
-                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yvk-w0-FGU">
+                                                    <rect key="frame" x="165" y="25" width="216" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="216" id="bPm-ey-CFY"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SometimeRegular" family="Sometime" pointSize="28"/>
+                                                    <color key="textColor" systemColor="systemTealColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76Y-Zz-u3s">
+                                                    <rect key="frame" x="165" y="66" width="216" height="19"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="216" id="FBh-gh-ZTX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gitHub" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bf-G5-xRj">
+                                                    <rect key="frame" x="165" y="95" width="216" height="19"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="216" id="V0a-ZE-aie"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="wfE-M0-eQ8" secondAttribute="bottom" constant="6" id="Enh-hy-eDd"/>
-                                                <constraint firstItem="wfE-M0-eQ8" firstAttribute="top" secondItem="ORF-ba-bAW" secondAttribute="topMargin" constant="6" id="UDs-AH-144"/>
-                                                <constraint firstItem="ACc-fI-bdj" firstAttribute="top" secondItem="ORF-ba-bAW" secondAttribute="topMargin" constant="14" id="YGF-pe-K8w"/>
-                                                <constraint firstItem="ACc-fI-bdj" firstAttribute="leading" secondItem="wfE-M0-eQ8" secondAttribute="trailing" constant="22" id="bdi-Ld-xDh"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="ACc-fI-bdj" secondAttribute="bottom" constant="36" id="m6W-Aj-Phc"/>
-                                                <constraint firstItem="wfE-M0-eQ8" firstAttribute="leading" secondItem="ORF-ba-bAW" secondAttribute="leadingMargin" constant="5" id="r1j-67-dia"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="ACc-fI-bdj" secondAttribute="trailing" constant="20" id="yXC-mJ-5XY"/>
+                                                <constraint firstItem="wfE-M0-eQ8" firstAttribute="leading" secondItem="ORF-ba-bAW" secondAttribute="leadingMargin" constant="5" id="0nL-kb-lGl"/>
+                                                <constraint firstItem="2Bf-G5-xRj" firstAttribute="top" secondItem="76Y-Zz-u3s" secondAttribute="bottom" constant="10" id="1Q9-dJ-3NO"/>
+                                                <constraint firstItem="wfE-M0-eQ8" firstAttribute="top" secondItem="ORF-ba-bAW" secondAttribute="topMargin" constant="6" id="2wB-Fr-AT2"/>
+                                                <constraint firstItem="Yvk-w0-FGU" firstAttribute="leading" secondItem="wfE-M0-eQ8" secondAttribute="trailing" constant="12" id="8IA-aq-cLO"/>
+                                                <constraint firstItem="2Bf-G5-xRj" firstAttribute="leading" secondItem="wfE-M0-eQ8" secondAttribute="trailing" constant="12" id="Dhe-Jy-TLX"/>
+                                                <constraint firstItem="Yvk-w0-FGU" firstAttribute="top" secondItem="ORF-ba-bAW" secondAttribute="top" constant="25" id="Tpi-uO-fOU"/>
+                                                <constraint firstAttribute="trailing" secondItem="76Y-Zz-u3s" secondAttribute="trailing" constant="12" id="VQu-GK-a34"/>
+                                                <constraint firstItem="76Y-Zz-u3s" firstAttribute="leading" secondItem="wfE-M0-eQ8" secondAttribute="trailing" constant="12" id="WgW-uZ-UB6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="wfE-M0-eQ8" secondAttribute="bottom" constant="6" id="nKk-eH-6RE"/>
+                                                <constraint firstAttribute="trailing" secondItem="2Bf-G5-xRj" secondAttribute="trailing" constant="12" id="ovt-Sl-m6H"/>
+                                                <constraint firstItem="76Y-Zz-u3s" firstAttribute="top" secondItem="Yvk-w0-FGU" secondAttribute="bottom" constant="10" id="xGv-eI-POI"/>
+                                                <constraint firstAttribute="trailing" secondItem="Yvk-w0-FGU" secondAttribute="trailing" constant="12" id="xMj-qg-e9B"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -246,9 +255,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="277"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOE-Vg-7J9">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a lot of text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOE-Vg-7J9">
                                                     <rect key="frame" x="20" y="30" width="353" height="247"/>
-                                                    <string key="text"> is a motivating quote generator app that provides users with a daily dose of inspiration and encouragement. Users can explore a collection of handpicked quotes from famous personalities, thought leaders, and literary figures. With a simple tap, they can discover insightful and thought-provoking quotes to uplift their spirits, motivate them to achieve their goals, and share with friends and family.</string>
                                                     <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -293,6 +301,7 @@
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bgj-OL-Ucr">
                                                     <rect key="frame" x="22.333333333333336" y="17.666666666666671" width="19.333333333333332" height="17.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="tintColor" systemColor="systemPurpleColor"/>
                                                     <imageReference key="image" image="questionmark.app" catalog="system" symbolScale="medium"/>
                                                 </imageView>
                                             </subviews>
@@ -309,8 +318,18 @@
                     <navigationItem key="navigationItem" title="About app" id="LnD-B5-c3y">
                         <barButtonItem key="leftBarButtonItem" title=" Back" id="Iri-xc-Fal">
                             <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="buttonActionBack:" destination="io2-7f-NI5" id="4nx-Pd-x79"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailLabel" destination="76Y-Zz-u3s" id="2WU-un-LQC"/>
+                        <outlet property="gitHubLabel" destination="2Bf-G5-xRj" id="VIJ-v0-KN8"/>
+                        <outlet property="imageDeveloper" destination="wfE-M0-eQ8" id="gLG-JR-4Lb"/>
+                        <outlet property="infoLabel" destination="NOE-Vg-7J9" id="ru1-xB-xDL"/>
+                        <outlet property="nameLabel" destination="Yvk-w0-FGU" id="xK4-fe-vrr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bf4-bf-au3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -443,6 +462,9 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

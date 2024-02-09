@@ -9,14 +9,43 @@ import UIKit
 
 final class AboutAppTableViewController: UITableViewController {
 
+    @IBOutlet var imageDeveloper: UIImageView!
+    @IBOutlet var gitHubLabel: UILabel!
+    @IBOutlet var emailLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
+    
+    @IBOutlet var infoLabel: UILabel!
+    
+    
+    private let developerInfo = DataStore.shared.developer
+    private let informationApp = DataStore.shared.appInfo
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setDeveloperCell()
+        setInformationCell()
 
     }
-
-    // MARK: - Table view data source
-
     
+    // MARK: - IB Actions
+    
+    @IBAction func buttonActionBack(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
+    
+    // MARK: - Private Methods
+    
+    private func setDeveloperCell() {
+        imageDeveloper.image = UIImage(named: developerInfo.photoURL)
+        imageDeveloper.layer.cornerRadius = imageDeveloper.frame.width / 2
+        emailLabel.text = developerInfo.email
+        gitHubLabel.text = developerInfo.githubURL
+        nameLabel.text = developerInfo.fullName
+    }
+
+    private func setInformationCell() {
+        infoLabel.text = informationApp.info
+    }
 }
 
 // MARK: - UITableViewDelegate

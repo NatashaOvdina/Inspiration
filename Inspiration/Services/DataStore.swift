@@ -17,13 +17,8 @@ final class DataStore {
     )
     
     let appInfo = AppInformation(
-        info: """
-        is a motivating quote generator app that provides users with a daily dose of
-        inspiration and encouragement. Users can explore a collection of handpicked quotes
-        from famous personalities, thought leaders, and literary figures.
-        With a simple tap, they can discover insightful and thought-provoking quotes
-        to uplift their spirits, motivate them to achieve their goals
-        """
+        info: "is a motivating quote generator app that provides users with a daily dose of inspiration and encouragement. Users can explore a collection of handpicked quotes from famous personalities, thought leaders, and literary figures. With a simple tap, they can discover insightful and thought-provoking quotes to uplift their spirits, motivate them to achieve their goals"
+        
     )
     
     private init() {}
