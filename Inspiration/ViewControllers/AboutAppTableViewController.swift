@@ -16,16 +16,37 @@ final class AboutAppTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    
+}
+
+// MARK: - UITableViewDelegate
+extension AboutAppTableViewController {
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let contentView = UIView()
+        let label = UILabel()
         
-        return 0
+        label.text = switch section {
+        case 0:
+            "Developer"
+        case 1:
+            "Information"
+        default:
+            "How to use"
+        }
+        
+        label.font = UIFont.boldSystemFont(ofSize: 17)
+        label.frame = CGRect(x: 10, y: -17, width: tableView.frame.width - 32, height:  30)
+        
+        label.textColor = .systemGray2
+        contentView.addSubview(label)
+        return contentView
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
-        return 0
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-
-  
-
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        10
+    }
 }

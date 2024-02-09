@@ -12,6 +12,9 @@
 		424CDBFE2B6E65B30045645B /* GenresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424CDBFD2B6E65B30045645B /* GenresViewController.swift */; };
 		424CDC002B6EC4010045645B /* GenresCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424CDBFF2B6EC4000045645B /* GenresCollectionViewCell.swift */; };
 		424CDC062B765AF00045645B /* AboutAppTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424CDC052B765AF00045645B /* AboutAppTableViewController.swift */; };
+		424CDC082B76890E0045645B /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424CDC072B76890E0045645B /* Developer.swift */; };
+		424CDC0B2B768AA90045645B /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424CDC0A2B768AA90045645B /* DataStore.swift */; };
+		424CDC0D2B768C760045645B /* AppInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424CDC0C2B768C760045645B /* AppInformation.swift */; };
 		42780DDC2B6942D900B9FE65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42780DDB2B6942D900B9FE65 /* AppDelegate.swift */; };
 		42780DDE2B6942D900B9FE65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42780DDD2B6942D900B9FE65 /* SceneDelegate.swift */; };
 		42780DE02B6942D900B9FE65 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42780DDF2B6942D900B9FE65 /* MainViewController.swift */; };
@@ -27,6 +30,9 @@
 		424CDBFD2B6E65B30045645B /* GenresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresViewController.swift; sourceTree = "<group>"; };
 		424CDBFF2B6EC4000045645B /* GenresCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresCollectionViewCell.swift; sourceTree = "<group>"; };
 		424CDC052B765AF00045645B /* AboutAppTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppTableViewController.swift; sourceTree = "<group>"; };
+		424CDC072B76890E0045645B /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
+		424CDC0A2B768AA90045645B /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		424CDC0C2B768C760045645B /* AppInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInformation.swift; sourceTree = "<group>"; };
 		42780DD82B6942D900B9FE65 /* Inspiration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inspiration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42780DDB2B6942D900B9FE65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42780DDD2B6942D900B9FE65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				424CDBFB2B6D3E0D0045645B /* NetworkManager.swift */,
+				424CDC0A2B768AA90045645B /* DataStore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -100,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				42780DEF2B69567300B9FE65 /* Quote.swift */,
+				424CDC072B76890E0045645B /* Developer.swift */,
+				424CDC0C2B768C760045645B /* AppInformation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -217,8 +226,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				424CDC082B76890E0045645B /* Developer.swift in Sources */,
+				424CDC0D2B768C760045645B /* AppInformation.swift in Sources */,
 				424CDBFE2B6E65B30045645B /* GenresViewController.swift in Sources */,
 				42780DF02B69567300B9FE65 /* Quote.swift in Sources */,
+				424CDC0B2B768AA90045645B /* DataStore.swift in Sources */,
 				424CDC002B6EC4010045645B /* GenresCollectionViewCell.swift in Sources */,
 				42780DE02B6942D900B9FE65 /* MainViewController.swift in Sources */,
 				424CDBFC2B6D3E0D0045645B /* NetworkManager.swift in Sources */,
