@@ -5,6 +5,8 @@
 //  Created by Natalia Ovdina on 09.02.2024.
 //
 
+import UIKit
+
 
 final class DataStore {
     static let shared = DataStore()
@@ -19,6 +21,31 @@ final class DataStore {
     let appInfo = AppInformation(
         info: "is a motivating quote generator app that provides users with a daily dose of inspiration and encouragement. Users can explore a collection of handpicked quotes from famous personalities, thought leaders, and literary figures. With a simple tap, they can discover insightful and thought-provoking quotes to uplift their spirits, motivate them to achieve their goals"
         
+    )
+    
+    let favoriteQuoteNav = Navigation(
+        header: "Save favorite quotes",
+        footer: "Tap on the heart icon to save and create your own list of quotes"
+    )
+    
+    let quotesNav = Navigation(
+        header: "View Affirmations",
+        footer: "Tap on a mint button to random quotes on different genres"
+    )
+    
+    let infoNav = Navigation(
+        header: "Some details",
+        footer: "Tap on the face icon to see the developer and information about app"
+    )
+    
+    let settingsNav = Navigation(
+        header: "Customize your screen",
+        footer: "Tap on the gear icon to set font and background's color "
+    )
+    
+    let genresNav = Navigation(
+        header: "Explore Categories",
+        footer: "Tap on the purple button to explore over the 50+ categories"
     )
     
     private init() {}
