@@ -6,7 +6,6 @@
 //
 
 
-
 struct AppInformation {
     let info: String
 }
@@ -14,4 +13,7 @@ struct AppInformation {
 struct Navigation {
     let header: String
     let footer: String
+    let image: String
 }
+
+

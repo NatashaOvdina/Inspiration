@@ -23,30 +23,37 @@ final class DataStore {
         
     )
     
-    let favoriteQuoteNav = Navigation(
-        header: "Save favorite quotes",
-        footer: "Tap on the heart icon to save and create your own list of quotes"
-    )
-    
-    let quotesNav = Navigation(
-        header: "View Affirmations",
-        footer: "Tap on a mint button to random quotes on different genres"
-    )
-    
-    let infoNav = Navigation(
-        header: "Some details",
-        footer: "Tap on the face icon to see the developer and information about app"
-    )
-    
-    let settingsNav = Navigation(
-        header: "Customize your screen",
-        footer: "Tap on the gear icon to set font and background's color "
-    )
-    
-    let genresNav = Navigation(
-        header: "Explore Categories",
-        footer: "Tap on the purple button to explore over the 50+ categories"
-    )
+    let navigationList = [
+        Navigation(
+            header: "Save favorite quotes",
+            footer: "Tap on the heart icon to save and create your own list of quotes",
+            image: "heart"
+        ),
+        
+        Navigation(
+            header: "View Affirmations",
+            footer: "Tap on a mint button to random quotes on different genres",
+            image: "hand.tap"
+        ),
+        
+        Navigation(
+            header: "Some details",
+            footer: "Tap on the face icon to see the developer and information about app",
+            image: "person.crop.circle.fill"
+        ),
+        
+        Navigation(
+            header: "Customize your screen",
+            footer: "Tap on the gear icon to set font and background's color",
+            image: "gearshape"
+        ),
+        
+        Navigation(
+            header: "Explore Categories",
+            footer: "Tap on the purple button to explore over the 50+ categories",
+            image: "hand.tap"
+        )
+    ]
     
     private init() {}
 }
