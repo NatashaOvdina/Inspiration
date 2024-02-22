@@ -34,8 +34,11 @@ final class StorageManager {
     }
     
     func delete(_ quote: Quote) {
-        realm.delete(quote)
+        write {
+            realm.delete(quote)
+        }
     }
+    
     // MARK: - Private method
     private func write(completion: () -> Void) {
         do {

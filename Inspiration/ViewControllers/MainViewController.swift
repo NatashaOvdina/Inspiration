@@ -21,7 +21,7 @@ final class MainViewController: UIViewController {
     private let storageManager = StorageManager.shared
     
     private var isFavorite = false
-    var currentQuote: Quote?
+    private var currentQuote: Quote?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,11 @@ final class MainViewController: UIViewController {
         heartButton.tintColor = .red
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? FavoritesTableViewController {
+            destinationVC.currentQuote = currentQuote
+        }
+    }
     
     private func fetchRandomQuote() {
         networkManager.fetch(Info.self, from: Link.randomQuoteURL.url) { result in

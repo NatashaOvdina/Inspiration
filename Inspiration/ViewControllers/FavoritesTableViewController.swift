@@ -10,24 +10,28 @@ import RealmSwift
 
 final class FavoritesTableViewController: UITableViewController {
     
+    var currentQuote: Quote!
     private let storageManager = StorageManager.shared
     private var favorites: Results<Quote>!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-      favorites = storageManager.fetchData(Quote.self)
-
-        
+        tableView.rowHeight = 90
+        favorites = storageManager.fetchData(Quote.self)
     }
-
+    
+    @IBAction func backButtonAction(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
+    
+}
     // MARK: - Table view data source
+extension FavoritesTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         favorites.count
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
-        0
+        1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -35,10 +39,41 @@ final class FavoritesTableViewController: UITableViewController {
         var content = cell.defaultContentConfiguration()
         let favorites = favorites[indexPath.row]
         content.text = favorites.quoteAuthor
+        content.textProperties.font = UIFont(name: "Futura", size: 18) ?? .systemFont(ofSize: 18)
+        content.textProperties.color = UIColor.purpleMilk
         content.secondaryText = favorites.quoteText
+        content.secondaryTextProperties.font = UIFont(name: "Optima Regular", size: 15) ?? .systemFont(ofSize: 15)
         
         cell.contentConfiguration = content
         return cell
     }
 
+}
+// MARK: - UITableViewDelegate
+
+extension FavoritesTableViewController {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func tableView(
+        _ tableView: UITableView,
+        editingStyleForRowAt indexPath: IndexPath
+    ) -> UITableViewCell.EditingStyle {
+        .delete
+    }
+    
+    override func tableView(
+        _ tableView: UITableView,
+        commit editingStyle: UITableViewCell.EditingStyle,
+        forRowAt indexPath: IndexPath
+    ) {
+        if editingStyle == .delete {
+            let quote = favorites[indexPath.row]
+            storageManager.delete(quote)
+        
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
 }
