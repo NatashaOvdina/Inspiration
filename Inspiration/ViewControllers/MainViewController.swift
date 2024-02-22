@@ -15,8 +15,13 @@ final class MainViewController: UIViewController {
     @IBOutlet var genreLabel: UILabel!
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet var heartButton: UIButton!
     
     private var networkManager = NetworkManager.shared
+    private let storageManager = StorageManager.shared
+    
+    private var isFavorite = false
+    var currentQuote: Quote?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +35,14 @@ final class MainViewController: UIViewController {
         fetchRandomQuote()
     }
     
+    @IBAction func heartButtonAction(_ sender: UIButton) {
+        guard let currentQuote else { return }
+        storageManager.save(currentQuote)
+        isFavorite = true
+        heartButton.tintColor = .red
+    }
+    
+    
     private func fetchRandomQuote() {
         networkManager.fetch(Info.self, from: Link.randomQuoteURL.url) { result in
             switch result {
@@ -39,13 +52,16 @@ final class MainViewController: UIViewController {
                     quoteLabel.text = info.data.first?.quoteText
                     authorLabel.text = info.data.first?.quoteAuthor
                     genreLabel.text = info.data.first?.quoteGenre
+                    
+                    currentQuote = info.data.first
                     activityIndicator.stopAnimating()
+                    
+                    isFavorite = false
+                    heartButton.tintColor = .black
                 }
             case .failure(let error):
                 print(error)
             }
         }
     }
-
-    
 }

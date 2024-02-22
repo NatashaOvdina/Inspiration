@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 enum Link {
     case randomQuoteURL
@@ -28,10 +29,10 @@ struct Info: Decodable {
     let data: [Quote]
 }
 
-struct Quote: Decodable {
-    let quoteText: String?
-    let quoteAuthor: String?
-    let quoteGenre: String?
+final class Quote: Object, Decodable {
+    @Persisted var quoteText: String?
+    @Persisted var quoteAuthor: String?
+    @Persisted var quoteGenre: String?
 }
 
 
