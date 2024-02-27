@@ -18,10 +18,22 @@ final class FavoritesTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.rowHeight = 90
         favorites = storageManager.fetchData(Quote.self)
+        
+        navigationItem.rightBarButtonItem = editButtonItem
+        editButtonItem.tintColor = .blackWhite
+        
     }
     
     @IBAction func backButtonAction(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        guard let favQuoteVC = segue.destination as? FavoriteQuoteViewController else { return }
+        let favQuote = favorites[indexPath.row]
+        favQuoteVC.favoriteQuote = favQuote
+      
     }
     
 }
@@ -39,8 +51,8 @@ extension FavoritesTableViewController {
         var content = cell.defaultContentConfiguration()
         let favorites = favorites[indexPath.row]
         content.text = favorites.quoteAuthor
-        content.textProperties.font = UIFont(name: "Futura", size: 18) ?? .systemFont(ofSize: 18)
-        content.textProperties.color = UIColor.purpleMilk
+        content.textProperties.font = UIFont(name: "Sometime", size: 25) ?? .systemFont(ofSize: 25)
+        content.textProperties.color = .pinkRose
         content.secondaryText = favorites.quoteText
         content.secondaryTextProperties.font = UIFont(name: "Optima Regular", size: 15) ?? .systemFont(ofSize: 15)
         

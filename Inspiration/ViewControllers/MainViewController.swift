@@ -62,7 +62,7 @@ final class MainViewController: UIViewController {
                     activityIndicator.stopAnimating()
                     
                     isFavorite = false
-                    heartButton.tintColor = .black
+                    heartButton.tintColor = .blackWhite
                 }
             case .failure(let error):
                 print(error)

@@ -40,7 +40,7 @@ extension NavigationTableViewController {
         
         content.text = navigation.header
         content.secondaryText = navigation.footer
-        content.image = UIImage(systemName: navigation.image)
+        content.image = UIImage(systemName: navigation.image)?.withTintColor(.pinkRose, renderingMode: .alwaysOriginal)
         content.textProperties.font = .boldSystemFont(ofSize: 20)
         content.secondaryTextProperties.font = UIFont(name: "Optima Regular", size: 16) ?? .systemFont(ofSize: 15)
         cell.contentConfiguration = content
