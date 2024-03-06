@@ -10,12 +10,13 @@ import UIKit
 final class GenresViewController: UIViewController {
     
     @IBOutlet var genresCollectionView: UICollectionView!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     private var networkManager = NetworkManager.shared
     private var genresList: [String] = []
+    private var filteredGenres: [String] = []
     
     private let searchController = UISearchController(searchResultsController: nil)
-    private var filteredGenres: [String] = []
     private var searchBarIsEmpty: Bool {
         guard let text = searchController.searchBar.text else { return false}
         return text.isEmpty
@@ -28,6 +29,8 @@ final class GenresViewController: UIViewController {
     // MARK: - Life View Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
         //   self.genresCollectionView.delegate = self
        genresCollectionView.dataSource = self
         setupSearchController()
@@ -54,12 +57,13 @@ final class GenresViewController: UIViewController {
     }
 
     private func fetchGenres() {
-        networkManager.fetch(Genre.self, from: Link.genresURL.url) { result in
+        networkManager.fetch(Genre.self, from: Link.genresURL.url) { [unowned self] result in
             switch result {
             case .success(let genres):
                 if let data = genres.data {
-                    self.genresList = data
-                    self.genresCollectionView.reloadData()
+                    genresList = data
+                    genresCollectionView.reloadData()
+                    activityIndicator.stopAnimating()
                 }
                 case .failure(let error):
                     print(error)
